@@ -1,0 +1,83 @@
+/* Animated border effect */
+
+.animated_border span {
+  position: absolute;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  z-index: 1;
+}
+
+@media all and (max-width: 980px) {
+   .et_pb_button.animated_border:after {
+      line-height: 1.7em !important;
+   }
+}
+
+.animated_border .border {
+  border: 1px solid #ffffff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.animated_border .top, .animated_border .bottom, .animated_border .left, .animated_border .right {
+  background-color: #ffffff;
+  height: 1px;
+  width: 0;
+}
+.animated_border .left, .animated_border .right {
+  height: 0;
+  width: 1px;
+}
+.animated_border .top {
+  top: -5px;
+  left: -15px;
+}
+.animated_border .bottom {
+  bottom: -5px;
+  right: -15px;
+}
+.animated_border .left {
+  top: -15px;
+  right: -5px;
+}
+.animated_border .right {
+  bottom: -15px;
+  left: -5px;
+}
+.animated_border:hover .border {
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+}
+.animated_border:hover .top, .animated_border:hover .bottom {
+  width: 100%;
+}
+.animated_border:hover .left, .animated_border:hover .right {
+  height: 100%;
+}
+.animated_border:hover .top {
+  left: -5px;
+}
+.animated_border:hover .bottom {
+  right: -5px;
+}
+.animated_border:hover .left {
+  top: -5px;
+}
+.animated_border:hover .right {
+  bottom: -5px;
+}
+
+/* End animated border effect */
